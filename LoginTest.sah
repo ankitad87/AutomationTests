@@ -1,0 +1,25 @@
+var $name = "Ankita Deshpande"
+var $orgName = "Ankita"
+var $mailId = "ankitad87@gmail.com"
+
+_assertVisible(_div("language"))
+_assertVisible(_span("Choose Language English"))
+_click(_span("Choose Language English"))
+_assertVisible(_div("English"))  //Verify English is available as a language.
+_assertVisible(_div("Dutch"))    //Verify Dutch is available as a language.
+_click(_div("English"))
+_assertVisible(_textbox("name"))
+_setValue(_textbox("name"), $name);
+_assertVisible(_textbox("orgName"))
+_setValue(_textbox("orgName"), $orgName);
+_assertVisible(_emailbox("email"))
+_setValue(_emailbox("email"), $mailId);
+_assertVisible(_span("I agree to the"))
+_assertEqual(true, _getAttribute(_submit("Get Started"), "disabled")) //Assert Submit button is not disabled before accepting the terms.
+_click(_span("I agree to the"));
+_wait(1000)
+_assertEqual(false, _getAttribute(_submit("Get Started"), "disabled")) //Assert submit button is now enabled.
+_click(_submit("Get Started"));
+_wait(5000, _isVisible(_span("A welcome email has been sent. Please check your email.")))
+_assertVisible(_span("A welcome email has been sent. Please check your email."))  //Comfirms the message stating welcome email has been sent.
+
