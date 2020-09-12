@@ -1,5 +1,7 @@
 # AutomationTests
 
+Variable values can be replaced as per desirable. Variables are declared at the start of the script.
+
 Sahi tests are stored under the path:
 sahi_pro\userdata\scripts\
 
