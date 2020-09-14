@@ -4,7 +4,7 @@ Please find documents for questions 1 and 3, along with description, uploaded in
 
 For question 2:
 
-Pre-requisites: SahiPro should be installed on the system
+Pre-requisites: SahiPro should be installed on the system.
 Time spent on this code: 1 Hour
 
 -Variable values can be replaced as per desirable. Variables are declared at the start of the script.
